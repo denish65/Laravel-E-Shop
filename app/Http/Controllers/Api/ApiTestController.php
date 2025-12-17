@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Api\ApiTestModel;
 
 class ApiTestController extends Controller
 {
@@ -32,6 +33,29 @@ class ApiTestController extends Controller
         ]    
     ];
         return response()->json($data, 200, $headers);
+    }
+
+
+    public function store(Request $request)
+    {
+
+        
+      $request->validate([
+        "name"  =>  "required",	
+        "email"	=>  "required",
+        "age"   =>  "required",
+        "phone" =>  "required",	
+        "DOB"   =>  "required"
+      ]);
+
+        ApiTestModel::create([
+            "name"  => $request->name,
+            "email" => $request->email,
+            "age"	=> $request->age,
+            "phone" => $request->phone,	
+            "DOB"   => $request->DOB
+        ]);
+
     }
 
 

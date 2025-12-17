@@ -21,3 +21,7 @@ use App\Http\Controllers\Api\ApiTestController;
 
 
 Route::get("testapidata",[ApiTestController::class,"index"])->name("test.api");
+Route::get("store",[ApiTestController::class,"store"])->name("store.api");
+
+
+
