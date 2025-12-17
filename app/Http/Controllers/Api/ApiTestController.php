@@ -56,6 +56,11 @@ class ApiTestController extends Controller
             "DOB"   => $request->DOB
         ]);
 
+        $headers =[];
+        $data =["data stored success fully"];
+
+        return response()->json($data, 200, $headers);
+
     }
 
 
