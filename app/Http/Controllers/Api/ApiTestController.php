@@ -75,4 +75,32 @@ class ApiTestController extends Controller
     }
 
 
+      public function update(Request $request ,$id)
+    {
+
+         $request->validate([
+        "name"  =>  "required",	
+        "email"	=>  "required",
+        "age"   =>  "required",
+        "phone" =>  "required",	
+        "DOB"   =>  "required"
+      ]);
+
+
+       $update = ApiTestModel::where("id",$id)->first();
+
+       $update =  $request->name;
+       $update =  $request->email;
+       $update =  $request->age;
+       $update =  $request->phone;
+       $update =  $request->DOB;
+       $update->save();
+       
+       $data=['data update successfully'];
+       
+        return response()->json($data, 200);
+
+    }
+
+
 }
