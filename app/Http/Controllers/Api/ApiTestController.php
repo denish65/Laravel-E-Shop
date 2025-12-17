@@ -11,7 +11,11 @@ class ApiTestController extends Controller
     public function index()
     {
 
-        $data =[ "composer"=>["laravel require packages"],"require" => [
+        $headers = [
+            "composer" => ["laravel require packages"]
+        ];
+
+        $data =[ "require" => [
 
         "php: ^8.1",
         "barryvdh/laravel-dompdf: ^2.0",
