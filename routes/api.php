@@ -24,6 +24,8 @@ Route::get("testapidata",[ApiTestController::class,"index"])->name("test.api");
 Route::post("store",[ApiTestController::class,"store"])->name("store.api");
 Route::get("getdata/{id}",[ApiTestController::class,"getData"])->name("getdata.api");
 Route::post("update/{id}",[ApiTestController::class,"update"])->name("update.api");
+Route::get("delete/{id}",[ApiTestController::class,"delete"])->name("delete.api");
+
 
 
 

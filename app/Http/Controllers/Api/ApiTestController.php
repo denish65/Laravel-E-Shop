@@ -103,4 +103,18 @@ class ApiTestController extends Controller
     }
 
 
+
+
+     public function delete(Request $request ,$id)
+    {
+
+       ApiTestModel::where("id",$id)->delete();
+        $data = ['data deleted successfully'];
+
+        return response()->json($data, 200);
+
+    }
+
+
+
 }
