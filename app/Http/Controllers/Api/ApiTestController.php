@@ -36,6 +36,16 @@ class ApiTestController extends Controller
     }
 
 
+     public function getall(Request $request)
+    {
+
+       $data = ApiTestModel::all();
+       
+
+        return response()->json($data, 200);
+
+    }
+
     public function store(Request $request)
     {
 
