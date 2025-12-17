@@ -152,7 +152,7 @@
             $shipping_charge=DB::table('shippings')->where('id',$order->shipping_id)->pluck('price');
           @endphp
           <th scope="col" class="text-right ">Shipping:</th>
-          <th><span>${{number_format($shipping_charge[0],2)}}</span></th>
+          <th><span>$@if(isset($shipping_charge[0])) {{number_format($shipping_charge[0],2)}} @endif </span></th>
         </tr>
         <tr>
           <th scope="col" class="empty"></th>
