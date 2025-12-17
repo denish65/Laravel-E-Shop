@@ -89,15 +89,15 @@ class ApiTestController extends Controller
 
        $update = ApiTestModel::where("id",$id)->first();
 
-       $update =  $request->name;
-       $update =  $request->email;
-       $update =  $request->age;
-       $update =  $request->phone;
-       $update =  $request->DOB;
+       $update->name  =  $request->name;
+       $update->email =  $request->email;
+       $update->age   =  $request->age;
+       $update->phone =  $request->phone;
+       $update->DOB   =  $request->DOB;
        $update->save();
        
        $data=['data update successfully'];
-       
+
         return response()->json($data, 200);
 
     }
