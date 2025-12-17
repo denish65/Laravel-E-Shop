@@ -67,7 +67,7 @@ class ApiTestController extends Controller
      public function getData(Request $request ,$id)
     {
 
-       $data = ApiTestModel::where("id",$id)->fisrt();
+       $data = ApiTestModel::where("id",$id)->first();
        
 
         return response()->json($data, 200);
