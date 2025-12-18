@@ -131,9 +131,9 @@
 
     Route::group(['prefix' => '/admin', 'middleware' => ['auth', 'admin']], function () {
         Route::get('/', [AdminController::class, 'index'])->name('admin');
-        Route::get('/file-manager', function () {
-            return view('backend.layouts.file-manager');
-        })->name('file-manager');
+        // Route::get('/file-manager', function () {
+        //     return view('backend.layouts.file-manager');
+        // })->name('file-manager');
         // user route
         Route::resource('users', 'UsersController');
         // Banner
