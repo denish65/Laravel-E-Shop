@@ -14,6 +14,7 @@ use App\Models\Cart;
 use App\Models\Brand;
 use App\User;
 use App\Observers\UserObserver;
+use App\Observers\ProductObserver;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -38,6 +39,6 @@ class EventServiceProvider extends ServiceProvider
         parent::boot();
 
         User::observe(UserObserver::class);
-        Product::observer(ProductObserver::class);
+        Product::observe(ProductObserver::class);
     }
 }
