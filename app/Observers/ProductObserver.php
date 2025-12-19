@@ -25,6 +25,7 @@ class ProductObserver
             "data" => $Product->toArray(),
         ]);
     }
+
     
 
       public function deleted(Product $Product)
