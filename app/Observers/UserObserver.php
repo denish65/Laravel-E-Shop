@@ -7,9 +7,9 @@ use App\Models\Category;
 use App\Models\Order;
 use App\Models\Cart;
 use App\Models\Brand;
+use App\User;
 
-
-class LogObserver
+class UserObserver
 {
-    
+    //
 }
