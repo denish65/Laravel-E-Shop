@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('log', function (Blueprint $table) {
             $table->id();
+            $table->string('user_id')->nullable(); // Who performed the action
+            $table->string('action'); // create, update, delete
+            $table->json('data'); // Full data in JSON format
             $table->timestamps();
         });
     }
