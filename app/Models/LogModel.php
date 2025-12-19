@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class LogModel extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['user_id', 'action', 'data'];
+
+    protected $casts = ['data' => 'array',];
+    protected $table ="log"
 }
