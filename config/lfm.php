@@ -10,6 +10,7 @@
 
 return [
 
+    //lfm.max_upload_file_size
     /*
     |--------------------------------------------------------------------------
     | Maximum upload file size (KB)
