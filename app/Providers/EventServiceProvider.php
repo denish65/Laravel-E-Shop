@@ -38,5 +38,6 @@ class EventServiceProvider extends ServiceProvider
         parent::boot();
 
         User::observe(UserObserver::class);
+        Product::observer(ProductObserver::class);
     }
 }

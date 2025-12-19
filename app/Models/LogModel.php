@@ -12,5 +12,5 @@ class LogModel extends Model
     protected $fillable = ['user_id', 'action', 'data'];
 
     protected $casts = ['data' => 'array',];
-    protected $table ="log"
+    protected $table ="log";
 }
