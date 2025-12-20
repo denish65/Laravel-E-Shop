@@ -2,8 +2,7 @@
 
 namespace App\Observers;
 
-class OrderObserver
+class CartObserver
 {
     //
 }
-
