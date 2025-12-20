@@ -10,7 +10,8 @@ class ProductObserver
 {
     public function created(Product $Product)
     {
-        LogModel::create([
+            //log model
+            LogModel::create([
             "user_id" => Auth::id() ?? "",
             "action" => "created",
             "data" => $Product->toArray(),
@@ -19,18 +20,26 @@ class ProductObserver
 
     public function updated(Product $Product)
     {
-           LogModel::create([
+            //log model
+            LogModel::create([
             "user_id" => Auth::id()  ?? "" ,
             "action" => "updated",
             "data" => $Product->toArray(),
         ]);
     }
+<<<<<<< HEAD
 
     
+=======
+>>>>>>> parent of 2e3b740 (product observer)
+
+
 
       public function deleted(Product $Product)
     {
-           LogModel::create([
+
+            //log model
+            LogModel::create([
             "user_id" => Auth::id()  ?? "",
             "action" => "deleted",
             "data" => $Product->toArray(),
