@@ -27,13 +27,6 @@ class ProductObserver
             "data" => $Product->toArray(),
         ]);
     }
-<<<<<<< HEAD
-
-    
-=======
->>>>>>> parent of 2e3b740 (product observer)
-
-
 
       public function deleted(Product $Product)
     {
