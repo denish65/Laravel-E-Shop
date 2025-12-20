@@ -11,7 +11,7 @@ class ProductObserver
     public function created(Product $Product)
     {
             //log model
-            LogModel::create([
+        LogModel::create([
             "user_id" => Auth::id() ?? "",
             "action" => "created",
             "data" => $Product->toArray(),
