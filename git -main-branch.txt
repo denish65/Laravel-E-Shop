@@ -1,1 +1,1 @@
-branch testing
+docker-compose exec laravel_app bash
